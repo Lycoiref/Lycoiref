@@ -1,10 +1,10 @@
 ### Hi there 👋
 
 <a href="https://github.com/anuraghazra/github-readme-stats">
-  <img height="200px" align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Lycoiref&layout=compact" />
+  <img height="160px" align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Lycoiref&layout=compact" />
 </a>
 <a href="https://github.com/anuraghazra/convoychat">
-  <img height="200px" align="center" src="https://github-readme-stats.vercel.app/api?username=Lycoiref" />
+  <img height="160px" align="center" src="https://github-readme-stats.vercel.app/api?username=Lycoiref" />
 </a>
 
 
