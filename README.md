@@ -4,7 +4,7 @@
   <img height="160px" align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Lycoiref&layout=compact&langs_count=8" />
 </a>
 <a href="https://github.com/anuraghazra/convoychat">
-  <img height="160px" align="center" src="https://github-readme-stats.vercel.app/api?username=Lycoiref" />
+  <img height="160px" align="center" src="https://github-readme-stats-sigma-five.vercel.app/api?username=Lycoiref" />
 </a>
 
 
