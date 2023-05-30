@@ -1,7 +1,7 @@
 ### Hi there,Welcome to Page of Lycoiref 👋
 
 <a href="https://github.com/anuraghazra/convoychat">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=Lycoiref" />
+  <img align="center" style="margin: auto;" src="https://github-readme-stats.vercel.app/api?username=Lycoiref" />
 </a>
 
 ### Lycoiref
@@ -27,7 +27,7 @@
 平静 -->
 
 <a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Lycoiref&layout=compact&langs_count=8" />
+  <img align="center" style="margin: auto;" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Lycoiref&layout=compact&langs_count=8" />
 </a>
 
 #### 维护的项目
