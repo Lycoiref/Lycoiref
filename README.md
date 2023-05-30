@@ -1,8 +1,9 @@
 ### Hi there,Welcome to Page of Lycoiref 👋
-
-<a href="https://github.com/anuraghazra/convoychat">
-  <img align="center" style="margin: auto;" src="https://github-readme-stats.vercel.app/api?username=Lycoiref" />
-</a>
+<div align="center">
+    <a href="https://github.com/anuraghazra/convoychat">
+        <img style="margin: auto;" src="https://github-readme-stats.vercel.app/api?username=Lycoiref" />
+    </a>
+</div>
 
 ### Lycoiref
 - 🇨🇳 来自中国的开发者
@@ -25,10 +26,11 @@
 愤怒
 焦虑
 平静 -->
-
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="center" style="margin: auto;" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Lycoiref&layout=compact&langs_count=8" />
-</a>
+<div align="center">
+    <a href="https://github.com/anuraghazra/github-readme-stats">
+        <img style="margin: auto;" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Lycoiref&layout=compact&langs_count=8" />
+    </a>
+</div>
 
 #### 维护的项目
 - :robot:[Chiya](https://github.com/Lycoiref/Chiya)
