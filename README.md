@@ -26,11 +26,9 @@
 愤怒
 焦虑
 平静 -->
-<div align="center">
-    <a href="https://github.com/anuraghazra/github-readme-stats">
-        <img style="margin: auto;" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Lycoiref&layout=compact&langs_count=8" />
-    </a>
-</div>
+<a href="https://github.com/anuraghazra/github-readme-stats">
+    <img style="margin: auto;" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Lycoiref&layout=compact&langs_count=8" />
+</a>
 
 #### 维护的项目
 - :robot:[Chiya](https://github.com/Lycoiref/Chiya)
