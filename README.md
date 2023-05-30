@@ -12,7 +12,7 @@
 - 📫 你可以通过邮箱联系我：1808347356@qq.com
   
 #### 技术栈
-- 💻 HTML、CSS、✨ JavaScript ✨(My Favorate❤️、TypeScript(~~Not Very Like~~)
+- 💻 HTML、CSS、✨ JavaScript ✨(My Favorate❤️)、TypeScript(~~Not Very Like~~)
 - 📱 Vue(2 & 3)、React(📖Learning)、Node.js
 - 📦 Express、Koa、Prisma、Sequelize
 - 🗒️ ElementUI(Element Plus)、Bootstrap
