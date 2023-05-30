@@ -1,10 +1,12 @@
 // import { Link } from 'react-router-dom'
-import './Home.css'
+import './Home.less'
 
 function Home() {
     return (
         <>
-            <main></main>
+            <main>
+                <div className="page"></div>
+            </main>
         </>
     )
 }
