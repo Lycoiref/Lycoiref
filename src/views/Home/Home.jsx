@@ -55,11 +55,6 @@ function Home() {
     return (
         <>
             <main>
-                {/* <div className="page">
-                    this is my first page
-                    <div className="test">111</div>
-                    <Test>111</Test>
-                </div> */}
                 <ReactFullpage
                     //fullpage options
                     licenseKey="gplv3-license"
