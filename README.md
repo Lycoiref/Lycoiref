@@ -10,7 +10,7 @@
 - 📝 致力于Web全栈开发
 - 🌱 一名忠实的JavaScript爱好者
 - 📺 ~~资深二次元~~
-- 📫 你可以通过邮箱联系我：1808347356@qq.com
+- 📫 你可以通过邮箱联系我：lycoiref@gmail.com
   
 #### 技术栈
 - 💻 HTML、CSS、✨ JavaScript ✨(My Favorate❤️)、TypeScript(~~Not Very Like~~)
