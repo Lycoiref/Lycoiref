@@ -19,13 +19,8 @@
 - 🗒️ ElementUI(Element Plus)、Bootstrap
 - 📚 MySQL、PostgreSQL
 - 🛠️ Git、Webpack、Vite
-- 🧱 C、Python
+- 🧱 C、Python、C++、Dart(📖Learning)
 - 📝 Markdown
-<!-- 兴奋
-悲伤
-愤怒
-焦虑
-平静 -->
 <a href="https://github.com/anuraghazra/github-readme-stats">
     <img style="margin: auto;" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Lycoiref&layout=compact&langs_count=8" />
 </a>
