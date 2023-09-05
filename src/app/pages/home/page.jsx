@@ -1,5 +1,7 @@
+'use client'
+
 // import { Link } from 'react-router-dom'
-import './Home.less'
+import './page.module.css'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import ReactFullpage from '@fullpage/react-fullpage'
