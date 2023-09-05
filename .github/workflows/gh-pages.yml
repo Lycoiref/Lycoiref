@@ -35,7 +35,7 @@ jobs:
 
             - run: yarn install --frozen-lockfile
             - run: yarn build
-            - run: echo 'blog.lycoiref.com' > CNAME
+            - run: echo "blog.lycoiref.com" > ./out/CNAME
 
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v3
