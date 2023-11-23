@@ -26,6 +26,12 @@
     }
   }
 
+  pre {
+    background: #f6f8fa;
+    color: #333;
+    transition: background-color 0.2s ease-in-out;
+  }
+
   .markdown-body {
     width: 100%;
     margin: 0 auto;
