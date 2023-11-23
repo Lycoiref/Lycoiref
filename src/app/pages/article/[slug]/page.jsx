@@ -23,13 +23,18 @@ function legacySlugify(s) {
 export const dynamicParams = true
 
 export async function generateStaticParams() {
-  let slugs = await getMarkdownFiles()
+  let MDs = await getMarkdownFiles()
+  let slugs = []
   // 去除非md文件
-  slugs = slugs.filter((slug) => slug.endsWith('.md'))
-  slugs = slugs.map((slug) => slug.replace(/\.md$/, ''))
+  MDs = MDs.filter((slug) => slug.endsWith('.md'))
+  MDs.map((md) => {
+    slugs.push({
+      slug: md.replace(/\.md$/, ''),
+    })
+  })
   console.log('slugs')
   console.log(slugs)
-  return slugs.map((slug) => ({ params: { slug } }))
+  return slugs
 }
 
 export default async function MarkdownPage({ params }) {
