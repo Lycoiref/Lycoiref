@@ -24,7 +24,21 @@ export const dynamicParams = true
 
 export async function generateStaticParams() {
   let slugs = await getMarkdownFiles()
+  // 去除非md文件
+  slugs = slugs.filter((slug) => slug.endsWith('.md'))
+  slugs = slugs.map((slug) => slug.replace(/\.md$/, ''))
+  console.log('slugs')
+  console.log(slugs)
   return slugs.map((slug) => ({ params: { slug } }))
+}
+
+export async function getStaticProps({ params }) {
+  let markdownMeta = await getMarkdownFileBySlug(params.slug)
+  return {
+    props: {
+      markdownMeta,
+    },
+  }
 }
 
 export default async function MarkdownPage({ params }) {
