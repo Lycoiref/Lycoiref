@@ -1,6 +1,7 @@
+/* eslint-disable react-refresh/only-export-components */
 import 'github-markdown-css'
 import './toc.scss'
-import { getMarkdownFileBySlug } from '@/utils/markdownUtils'
+import { getMarkdownFileBySlug, getMarkdownFiles } from '@/utils/markdownUtils'
 // import ReactMarkdown from 'react-markdown'
 // import remarkGfm from 'remark-gfm'
 // import rehypeRaw from 'rehype-raw' // 解析标签，支持html语法
@@ -17,6 +18,33 @@ import 'highlight.js/styles/github.css'
 
 function legacySlugify(s) {
   return string(s).slugify().toString()
+}
+
+// 使用SSG
+export async function getStaticPaths() {
+  let paths = await getMarkdownFiles()
+  // 只保留md文件名
+  paths = paths.filter((path) => path.endsWith('.md'))
+
+  return {
+    paths: paths.map((path) => {
+      return {
+        params: {
+          slug: path.replace(/\.md$/, ''),
+        },
+      }
+    }),
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  let markdownMeta = await getMarkdownFileBySlug(params.slug)
+  return {
+    props: {
+      ...markdownMeta,
+    },
+  }
 }
 
 export default async function MarkdownPage({ params }) {
