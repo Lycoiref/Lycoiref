@@ -1,32 +1,107 @@
 #article-page {
-  width: 100vw;
+  // 风格变量
+  $ruler: 16px;
+  $color-red: #ae1100;
+  $color-bg: #ebecf0;
+  $color-shadow: #babecc;
+  $color-white: #fff;
+
+  width: 100%;
+  background-color: $color-bg;
 
   .markdown-body {
-    max-width: 800px;
+    width: 100%;
     margin: 0 auto;
+    margin-bottom: 100px;
+
+    border: 0;
+    outline: 0;
+    font-size: $ruler;
+    border-radius: 40px;
+    padding: $ruler;
+    background-color: $color-bg;
+    text-shadow: 1px 1px 0 $color-white;
+
+    color: #61677c;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px $color-white, 5px 5px 20px $color-shadow;
+    transition: all 0.2s ease-in-out;
+    font-weight: 600;
+  }
+
+  @media (min-width: 768px) {
+    .markdown-body {
+      width: calc(40% + 100px);
+      margin: 0 auto;
+      margin-bottom: 100px;
+    }
   }
 
   /* TOC样式 */
   .toc {
+    display: none;
     position: fixed;
     top: 100px;
     right: 0;
-    width: 200px;
-
+    width: 250px;
     margin-top: 1.5em;
-    border: 1px solid #ddd;
     padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+
+    /* TOC链接样式 */
+    a {
+      display: block;
+      margin-bottom: 0.5em;
+      padding: 5px;
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s ease-in-out;
+    }
+
+    a:hover {
+      color: #0070f3;
+    }
+
+    /* 列表样式 */
+    ol {
+      list-style: none;
+      padding-left: 15px;
+      margin: 0;
+    }
+
+    /* 列表项样式 */
+    li {
+      display: block;
+      counter-increment: list-item;
+    }
   }
 
-  /* TOC链接样式 */
-  .toc a {
-    display: block;
-    margin-bottom: 0.5em;
-    text-decoration: none;
-    color: #333;
+  // 卡片样式
+  .card {
+    border: 0;
+    outline: 0;
+    font-size: $ruler;
+    border-radius: $ruler * 20;
+    padding: $ruler;
+    background-color: $color-bg;
+    text-shadow: 1px 1px 0 $color-white;
   }
 
-  .toc a:hover {
-    color: #0070f3;
+  // 暗色主题
+  $dark-bg: #1a1a1a;
+  $dark-text: #b4b4b4;
+  $dark-shadow: #292929;
+
+  .dark {
+    background-color: $dark-bg;
+    color: $dark-text;
+    box-shadow: -5px -5px 20px $dark-bg, 5px 5px 20px $dark-shadow;
+    transition: all 0.2s ease-in-out;
+    font-weight: 600;
   }
 }

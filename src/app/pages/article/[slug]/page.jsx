@@ -12,12 +12,17 @@ import MarkdownIt from 'markdown-it'
 import Container from 'markdown-it-container'
 import Anchor from 'markdown-it-anchor'
 import Toc from 'markdown-it-toc-done-right'
-import string from 'string'
+import uslug from 'uslug'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/github.css'
 
 function legacySlugify(s) {
-  return string(s).slugify().toString()
+  // console.log(string(s))
+  let url = uslug(s, {
+    allowedChars: '.',
+  })
+  console.log(url)
+  return url
 }
 
 export const dynamicParams = true
@@ -32,8 +37,6 @@ export async function generateStaticParams() {
       slug: md.replace(/\.md$/, ''),
     })
   })
-  console.log('slugs')
-  console.log(slugs)
   return slugs
 }
 
@@ -66,7 +69,7 @@ export default async function MarkdownPage({ params }) {
     .use(Toc, {
       slugify: legacySlugify,
       containerClass: 'toc',
-      level: [2, 3],
+      level: [1, 2, 3],
     })
     .use(Container, 'tip', {
       render: function (tokens, idx) {
@@ -78,12 +81,11 @@ export default async function MarkdownPage({ params }) {
       },
     })
   let result = md.render(content)
-  console.log(result)
   return (
     <div id="article-page">
       <h1>{data.title}</h1>
       <p>{data.description}</p>
-      {/* <p>{data.date.toLocaleDateString()}</p> */}
+      <p>{data.date.toLocaleDateString()}</p>
       <div
         className="markdown-body"
         dangerouslySetInnerHTML={{ __html: result }}
