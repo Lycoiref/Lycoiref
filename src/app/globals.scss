@@ -1,0 +1,10 @@
+html {
+  [data-theme='dark'] {
+    // 使用bs的颜暗黑配色
+    background-color: #212529;
+    color: #fff;
+
+    transition: all 0.2s ease-in-out;
+  }
+  transition: all 0.2s ease-in-out;
+}

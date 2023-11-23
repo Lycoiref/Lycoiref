@@ -1,4 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
+import 'highlight.js/styles/github.css'
 import 'github-markdown-css'
 import './toc.scss'
 import { getMarkdownFileBySlug, getMarkdownFiles } from '@/utils/markdownUtils'
@@ -14,14 +15,13 @@ import Anchor from 'markdown-it-anchor'
 import Toc from 'markdown-it-toc-done-right'
 import uslug from 'uslug'
 import hljs from 'highlight.js'
-import 'highlight.js/styles/github.css'
+import MarkdownRender from '@/components/Markdown/MarkdownRender'
 
 function legacySlugify(s) {
   // console.log(string(s))
   let url = uslug(s, {
     allowedChars: '.',
   })
-  console.log(url)
   return url
 }
 
@@ -81,47 +81,5 @@ export default async function MarkdownPage({ params }) {
       },
     })
   let result = md.render(content)
-  return (
-    <div id="article-page">
-      <div className="header">
-        <h1>{data.title}</h1>
-        <p>{data.description}</p>
-        <p>{data.date.toLocaleDateString()}</p>
-      </div>
-      <div className="article">
-        <div
-          className="markdown-body"
-          dangerouslySetInnerHTML={{ __html: result }}
-        ></div>
-      </div>
-    </div>
-  )
-  // let { frontmatter, contentHtml } = md
-  // return (
-  //   <div id="article-page">
-  //     <h1>{data.title}</h1>
-  //     <p>{data.description}</p>
-  //     <p>{data.date.toLocaleDateString()}</p>
-  //     <ReactMarkdown
-  //       remarkPlugins={[remarkGfm]}
-  //       rehypePlugins={[rehypeRaw, rehypeToc]}
-  //       components={{
-  //         code({ node, inline, className, children, ...props }) {
-  //           console.log(node)
-  //           return inline ? (
-  //             <code className={className} {...props}>
-  //               {children}
-  //             </code>
-  //           ) : (
-  //             <SyntaxHighlighterSever className={className}>
-  //               {String(children).replace(/\n$/, '')}
-  //             </SyntaxHighlighterSever>
-  //           )
-  //         },
-  //       }}
-  //     >
-  //       {md.content}
-  //     </ReactMarkdown>
-  //   </div>
-  // )
+  return <MarkdownRender data={data} content={result} />
 }

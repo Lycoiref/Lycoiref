@@ -6,13 +6,29 @@
   $color-shadow: #babecc;
   $color-white: #fff;
 
+  $dark-color-bg: #212529;
+  $dark-color-white: #fff;
+
   width: 100%;
-  background-color: $color-bg;
+  padding-bottom: 100px;
+  background: $color-bg;
+  transition: background-color 0.2s ease-in-out;
+
+  &[data-theme='dark'] {
+    background: $dark-color-bg;
+    color: $dark-color-white;
+    transition: background-color 0.2s ease-in-out;
+
+    pre {
+      background: #1d1c1c;
+      color: $dark-color-white;
+      transition: background-color 0.2s ease-in-out;
+    }
+  }
 
   .markdown-body {
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 100px;
 
     border: 0;
     outline: 0;
@@ -25,8 +41,20 @@
     color: #61677c;
     font-weight: bold;
     box-shadow: -5px -5px 20px $color-white, 5px 5px 20px $color-shadow;
-    transition: all 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
     font-weight: 600;
+
+    &:hover {
+      box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+    }
+
+    &[data-theme='dark'] {
+      background-color: $dark-color-bg;
+      color: $dark-color-white;
+      font-weight: normal;
+      text-shadow: none;
+      transition: background-color 0.2s ease-in-out;
+    }
   }
 
   @media (min-width: 768px) {
@@ -34,6 +62,7 @@
       width: calc(40% + 100px);
       margin: 0 auto;
       margin-bottom: 100px;
+      padding: 60px;
     }
   }
 
@@ -90,18 +119,5 @@
     padding: $ruler;
     background-color: $color-bg;
     text-shadow: 1px 1px 0 $color-white;
-  }
-
-  // 暗色主题
-  $dark-bg: #1a1a1a;
-  $dark-text: #b4b4b4;
-  $dark-shadow: #292929;
-
-  .dark {
-    background-color: $dark-bg;
-    color: $dark-text;
-    box-shadow: -5px -5px 20px $dark-bg, 5px 5px 20px $dark-shadow;
-    transition: all 0.2s ease-in-out;
-    font-weight: 600;
   }
 }
