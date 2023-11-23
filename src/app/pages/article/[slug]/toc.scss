@@ -1,0 +1,32 @@
+#article-page {
+  width: 100vw;
+
+  .markdown-body {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* TOC样式 */
+  .toc {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 200px;
+
+    margin-top: 1.5em;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+
+  /* TOC链接样式 */
+  .toc a {
+    display: block;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .toc a:hover {
+    color: #0070f3;
+  }
+}
