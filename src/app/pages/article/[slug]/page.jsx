@@ -20,31 +20,11 @@ function legacySlugify(s) {
   return string(s).slugify().toString()
 }
 
-// 使用SSG
-export async function getStaticPaths() {
-  let paths = await getMarkdownFiles()
-  // 只保留md文件名
-  paths = paths.filter((path) => path.endsWith('.md'))
+export const dynamicParams = true
 
-  return {
-    paths: paths.map((path) => {
-      return {
-        params: {
-          slug: path.replace(/\.md$/, ''),
-        },
-      }
-    }),
-    fallback: false,
-  }
-}
-
-export async function getStaticProps({ params }) {
-  let markdownMeta = await getMarkdownFileBySlug(params.slug)
-  return {
-    props: {
-      ...markdownMeta,
-    },
-  }
+export async function generateStaticParams() {
+  let slugs = await getMarkdownFiles()
+  return slugs.map((slug) => ({ params: { slug } }))
 }
 
 export default async function MarkdownPage({ params }) {
