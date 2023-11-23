@@ -62,7 +62,7 @@ yarn add markdown-it
 `markdown-it`，在官方文档中，`mdit`的引入方式为 require，但是在 Nextjs 中，显然
 我们更倾向于使用`import`，因此我们可以使用以下方式引入`mdit`：
 
-```jsx
+```jsx:app/pages/route/page.jsx
 import MarkdownIt from 'markdown-it' // 导入markdown-it
 
 export default function Page() {
@@ -246,7 +246,7 @@ export default function Page() {
 出于某种原因，`md`文档不能使用中文名，否则会导致错误，笔者还没有找到解决方案。
 :::
 
-```js lib/markdownUtils.js
+```js:lib/markdownUtils.js
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'

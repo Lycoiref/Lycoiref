@@ -12,6 +12,7 @@ import { getMarkdownFileBySlug, getMarkdownFiles } from '@/utils/markdownUtils'
 import MarkdownIt from 'markdown-it'
 import Container from 'markdown-it-container'
 import Anchor from 'markdown-it-anchor'
+import NamedCodeBlocks from 'markdown-it-named-code-blocks'
 import Toc from 'markdown-it-toc-done-right'
 import uslug from 'uslug'
 import hljs from 'highlight.js'
@@ -60,6 +61,7 @@ export default async function MarkdownPage({ params }) {
     xhtmlOut: true,
     typographer: true,
   })
+    .use(NamedCodeBlocks)
     .use(Anchor, {
       permalink: Anchor.permalink.linkInsideHeader({
         placement: 'before',
@@ -75,6 +77,33 @@ export default async function MarkdownPage({ params }) {
       render: function (tokens, idx) {
         if (tokens[idx].nesting === 1) {
           return '<div class="tip">'
+        } else {
+          return '</div>\n'
+        }
+      },
+    })
+    .use(Container, 'warning', {
+      render: function (tokens, idx) {
+        if (tokens[idx].nesting === 1) {
+          return '<div class="warning">'
+        } else {
+          return '</div>\n'
+        }
+      },
+    })
+    .use(Container, 'danger', {
+      render: function (tokens, idx) {
+        if (tokens[idx].nesting === 1) {
+          return '<div class="danger">'
+        } else {
+          return '</div>\n'
+        }
+      },
+    })
+    .use(Container, 'info', {
+      render: function (tokens, idx) {
+        if (tokens[idx].nesting === 1) {
+          return '<div class="info">'
         } else {
           return '</div>\n'
         }

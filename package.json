@@ -20,6 +20,7 @@
     "markdown-it": "^13.0.2",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-container": "^3.0.0",
+    "markdown-it-named-code-blocks": "^0.2.0",
     "markdown-it-toc-done-right": "^4.2.0",
     "next": "^14.0.3",
     "react": "^18.2.0",

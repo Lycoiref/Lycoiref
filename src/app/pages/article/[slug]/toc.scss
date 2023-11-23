@@ -110,6 +110,91 @@
     }
   }
 
+  blockquote {
+    p {
+      font-weight: lighter;
+      font-style: italic;
+    }
+  }
+
+  // 代码块文件名样式
+  .named-fence-block {
+    position: relative;
+
+    .named-fence-filename {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0.5em 1em;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      font-size: 0.8em;
+      font-weight: bold;
+      color: #bdbdbd;
+    }
+  }
+
+  // 自定义块样式
+  .tip {
+    background-color: #dff0d8;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 14px;
+    border-radius: 15px;
+    color: #3c763d;
+
+    p {
+      margin-top: 10px;
+    }
+
+    &::before {
+      content: 'Tips:';
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  .warning {
+    background-color: #fdf6cd;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 14px;
+    border-radius: 15px;
+    color: #8a6d3b;
+
+    p {
+      margin-top: 10px;
+    }
+
+    &::before {
+      content: 'Warning:';
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  .danger {
+    background-color: #f2dede;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 14px;
+    border-radius: 15px;
+    color: #a94442;
+
+    p {
+      margin-top: 10px;
+    }
+
+    &::before {
+      content: 'Danger:';
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
   // 卡片样式
   .card {
     border: 0;
