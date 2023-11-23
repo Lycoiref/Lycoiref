@@ -32,15 +32,6 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ params: { slug } }))
 }
 
-export async function getStaticProps({ params }) {
-  let markdownMeta = await getMarkdownFileBySlug(params.slug)
-  return {
-    props: {
-      markdownMeta,
-    },
-  }
-}
-
 export default async function MarkdownPage({ params }) {
   let markdownMeta = await getMarkdownFileBySlug(params.slug)
   let data = markdownMeta.data
