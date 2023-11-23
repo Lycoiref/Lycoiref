@@ -16,5 +16,12 @@ export async function getMarkdownFileBySlug(slug) {
     'utf8'
   )
   let { data, content } = matter(markdownFile)
+  if (!data) {
+    data = {
+      title: 'No title',
+      description: 'No description',
+      date: '',
+    }
+  }
   return { data, content }
 }

@@ -2,18 +2,21 @@
 title: The first article
 description: This is the first article.
 date: 2020-10-01
+author: Lycoiref
 ---
-[[toc]]
 
+[[toc]]
 
 # Title
 
 This is an article post.
+
 ## Subheading
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ::: tip
-React-Markdown的代码高亮插件在Next13中无法正常解析，需要自己在'use client'中引入Prism组件，并重新封装才能正常使用。
+React-Markdown 的代码高亮插件在 Next13 中无法正常解析，需要自己在'use client'中引入 Prism 组件，并重新封装才能正常使用。
 :::
 
 ```jsx
@@ -35,7 +38,7 @@ export default function SyntaxHighlighterSever({ children, className }) {
 
 ## 测试对齐
 
-| Syntax      | Description | Test Text     |
-| :---        |    :----:   |          ---: |
-| Header      | Title       | Here's this   |
-| Paragraph   | Text        | And more      |
+| Syntax    | Description |   Test Text |
+| :-------- | :---------: | ----------: |
+| Header    |    Title    | Here's this |
+| Paragraph |    Text     |    And more |

@@ -83,13 +83,17 @@ export default async function MarkdownPage({ params }) {
   let result = md.render(content)
   return (
     <div id="article-page">
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
-      <p>{data.date.toLocaleDateString()}</p>
-      <div
-        className="markdown-body"
-        dangerouslySetInnerHTML={{ __html: result }}
-      ></div>
+      <div className="header">
+        <h1>{data.title}</h1>
+        <p>{data.description}</p>
+        <p>{data.date.toLocaleDateString()}</p>
+      </div>
+      <div className="article">
+        <div
+          className="markdown-body"
+          dangerouslySetInnerHTML={{ __html: result }}
+        ></div>
+      </div>
     </div>
   )
   // let { frontmatter, contentHtml } = md
