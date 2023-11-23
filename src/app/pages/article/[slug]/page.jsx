@@ -65,7 +65,7 @@ export default async function MarkdownPage({ params }) {
     <div id="article-page">
       <h1>{data.title}</h1>
       <p>{data.description}</p>
-      <p>{data.date.toLocaleDateString()}</p>
+      {/* <p>{data.date.toLocaleDateString()}</p> */}
       <div
         className="markdown-body"
         dangerouslySetInnerHTML={{ __html: result }}
