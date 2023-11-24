@@ -8,3 +8,11 @@ html {
   }
   transition: all 0.2s ease-in-out;
 }
+
+.fireworks {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 11;
+  pointer-events: none;
+}
