@@ -1,3 +1,4 @@
+html,html [data-theme=dark]{transition:all .2s ease-in-out}html [data-theme=dark]{background-color:#212529;color:#fff}.fireworks{position:fixed;left:0;top:0;z-index:11;pointer-events:none}
 /*!
  * Bootstrap Icons v1.11.2 (https://icons.getbootstrap.com/)
  * Copyright 2019-2023 The Bootstrap Authors
