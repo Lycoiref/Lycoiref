@@ -36,9 +36,11 @@
     "uslug": "^1.0.4"
   },
   "devDependencies": {
+    "@types/node": "20.10.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/react-syntax-highlighter": "^15.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.38.0",
     "eslint-config-next": "^14.0.3",
@@ -49,6 +51,7 @@
     "eslint-plugin-react-refresh": "^0.3.4",
     "postcss": "^8.4.31",
     "prettier": "^2.8.8",
-    "tailwindcss": "^3.3.5"
+    "tailwindcss": "^3.3.5",
+    "typescript": "5.3.2"
   }
 }

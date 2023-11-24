@@ -3,7 +3,7 @@ import style from './top.module.scss'
 
 export default function TopBar() {
   const goArchive = () => {
-    window.location.href = '/archive'
+    window.location.href = '/pages/archive'
   }
 
   return (

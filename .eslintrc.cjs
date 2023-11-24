@@ -6,6 +6,8 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
+    // tsx支持
+    'plugin:@typescript-eslint/recommended',
     'next/core-web-vitals',
   ],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
