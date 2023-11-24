@@ -1,6 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   [data-theme='dark'] {
-    // 使用bs的颜暗黑配色
+    /* 使用bs的颜暗黑配色 */
     background-color: #212529;
     color: #fff;
 
