@@ -5,6 +5,9 @@ export default function TopBar() {
   const goArchive = () => {
     window.location.href = '/pages/archive'
   }
+  const goDLC = () => {
+    window.location.href = '/pages/dlc'
+  }
 
   return (
     <div className="w-screen block overflow-hidden h-16">
@@ -30,6 +33,12 @@ export default function TopBar() {
           <div className={style.item}>
             <i className="bi bi-image"></i>
             <div className={style.text}>图库</div>
+          </div>
+          <div className={style.item}>
+            <i className="bi bi-person"></i>
+            <div className={style.text} onClick={goDLC}>
+              SBDLC
+            </div>
           </div>
         </div>
         <div className="right col flex justify-end">
