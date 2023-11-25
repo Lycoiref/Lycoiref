@@ -1,3 +1,4 @@
+import 'animate.css'
 import './globals.scss'
 // add bootstrap css
 import 'bootstrap/dist/css/bootstrap.css'
@@ -5,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 // import { Inter } from 'next/font/google'
 import { Fireworks } from '@/components/Fireworks'
+import TopBar from '@/components/MainPage/TopBar/TopBar'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="zh">
       <body>
+        <TopBar />
         <Fireworks />
         {children}
       </body>
