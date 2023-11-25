@@ -1,7 +1,7 @@
 'use client'
 
 // import { Link } from 'react-router-dom'
-import './page.module.css'
+import './page.module.scss'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import ReactFullpage from '@fullpage/react-fullpage'
