@@ -14,6 +14,11 @@ html {
   }
 }
 
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 .fireworks {
   position: fixed;
   left: 0;

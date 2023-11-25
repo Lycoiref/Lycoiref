@@ -19,8 +19,10 @@ export async function getMarkdownFileBySlug(slug) {
   if (!data) {
     data = {
       title: 'No title',
+      author: 'Lycoiref',
       description: 'No description',
       date: '',
+      tags: [],
     }
   }
   return { data, content }
