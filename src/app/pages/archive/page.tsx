@@ -1,7 +1,10 @@
 /* eslint-disable react-refresh/only-export-components */
 import React from 'react'
 import ArticleCard from './Card'
-import { getMarkdownFiles, getMarkdownFileBySlug } from '@/utils/markdownUtils'
+import {
+  getMarkdownFiles,
+  getMarkdownFileBySlug,
+} from '../../../utils/markdownUtils'
 
 export interface Article {
   title: string
