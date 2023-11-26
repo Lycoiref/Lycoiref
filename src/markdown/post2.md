@@ -79,7 +79,7 @@ export default async function ArchivePage() {
 像这样获取数据之后，我们就会愉快的发现，至少在`yarn dev`中，一切都是
 正常的，但是当我们进行部署到生产环境时，问题出现了：
 
-![Alt text](e81f89d3f428ca443fb7d36c433da6e6.png)
+![Alt text](/post2/e81f89d3f428ca443fb7d36c433da6e6.png)
 
 打开控制台，我们就能看到一片红色的报错，虽然目前笔者还不清楚是什么原因
 （欢迎大神指点），而且该页面除了有报错外其他表现均正常，但是既然出现报错
