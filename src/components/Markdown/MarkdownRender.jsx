@@ -127,7 +127,7 @@ export default function MarkdownRender({ slug }) {
     fetchData()
   }, [content, slug])
 
-  return (
+  return (result &&
     <div id="article-page" data-theme={theme}>
       <div className="header">
         {data && <><h1>{data.title}</h1>
