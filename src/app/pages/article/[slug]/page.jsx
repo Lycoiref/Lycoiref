@@ -16,7 +16,7 @@ import NamedCodeBlocks from 'markdown-it-named-code-blocks'
 import Toc from 'markdown-it-toc-done-right'
 import uslug from 'uslug'
 import hljs from 'highlight.js'
-import MarkdownRender from '@/components/Markdown/MarkdownRender'
+import MarkdownRender from '../../../../components/Markdown/MarkdownRender'
 
 function legacySlugify(s) {
   // console.log(string(s))
