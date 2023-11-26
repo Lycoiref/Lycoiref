@@ -1,5 +1,5 @@
-/* eslint-disable react-refresh/only-export-components */
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import ArticleCard from './Card'
 import {
   getMarkdownFiles,
@@ -15,24 +15,34 @@ export interface Article {
   slug: string
 }
 
-export default async function ArchivePage() {
-  let files = await getMarkdownFiles()
-  files = files
-    .filter((file) => file.match(/\.md$/))
-    .map((file) => file.replace(/\.md$/, ''))
-  const articles: Array<Article> = []
-  for (const file of files) {
-    const { data } = await getMarkdownFileBySlug(file)
-    const article = {
-      title: data.title,
-      author: data.author,
-      description: data.description,
-      date: data.date,
-      tags: data.tags || [],
-      slug: file,
+const ArchivePage: React.FC = () => {
+  const [articles, setArticles] = useState<Article[]>([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      let files = await getMarkdownFiles()
+      files = files
+        .filter((file) => file.match(/\.md$/))
+        .map((file) => file.replace(/\.md$/, ''))
+
+      const articlesData: Article[] = []
+      for (const file of files) {
+        const { data } = await getMarkdownFileBySlug(file)
+        const article: Article = {
+          title: data.title,
+          author: data.author,
+          description: data.description,
+          date: data.date,
+          tags: data.tags || [],
+          slug: file,
+        }
+        articlesData.push(article)
+      }
+      setArticles(articlesData)
     }
-    articles.push(article)
-  }
+
+    fetchData()
+  }, []) // Empty dependency array ensures that the effect runs only once
 
   return (
     <div>
@@ -43,3 +53,5 @@ export default async function ArchivePage() {
     </div>
   )
 }
+
+export default ArchivePage
