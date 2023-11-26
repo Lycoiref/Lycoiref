@@ -1,6 +1,5 @@
-/* eslint-disable react-refresh/only-export-components */
 'use client'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import ArticleCard from './Card'
 
 export interface Article {

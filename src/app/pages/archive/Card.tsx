@@ -7,7 +7,11 @@ export default function ArticleCard({ article }: { article: Article }) {
   // console.log(article)
 
   return (
-    <Link href={`/pages/article/${slug}`} className="text-black no-underline">
+    <Link
+      href={`/pages/article/${slug}`}
+      prefetch={false}
+      className="text-black no-underline"
+    >
       <div className="article-card flex h-24">
         <div className="img w-40 h-24 rounded overflow-hidden">
           <picture className="w-full h-full object-cover">
