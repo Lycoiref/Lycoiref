@@ -1,5 +1,5 @@
 'use client'
-import './top.scss'
+// import './top.scss'
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 
