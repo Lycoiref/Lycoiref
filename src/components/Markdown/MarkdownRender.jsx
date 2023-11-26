@@ -21,8 +21,8 @@ export default function MarkdownRender({ content, data }) {
     <div id="article-page" data-theme={theme}>
       <div className="header">
         <h1>{data.title}</h1>
-        <p>{data.description}</p>
-        <p>{data.date.toLocaleDateString()}</p>
+        <div>{data.description}</div>
+        <div>{data.date.toLocaleDateString()}</div>
       </div>
       <div className="article">
         <div
