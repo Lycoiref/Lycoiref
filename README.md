@@ -43,29 +43,28 @@
     <img src="https://img.shields.io/badge/-Markdown-000000?style=flat-square&logo=Markdown&logoColor=white" />
 </p>
 
-__Web 开发能力__
+**Web 开发能力**
 
 Frontend:
+
 - 💻 HTML、CSS、✨ JavaScript ✨(My Favorate❤️)、TypeScript
 - 📱 Vue(2 & 3)、React(📖Learning)、Node.js
 - 🗒️ ElementUI(Element Plus)、Bootstrap
 
 Backend:
+
 - 📦 Express、Koa、Prisma、Sequelize
 - 📚 MySQL、PostgreSQL
 
-__工具与构建__
+**工具与构建**
 
 - 🧶 pnpm、NPM、Yarn
 - 🛠️ Git、Webpack、Vite
 - 🧱 C、Python、C++、Rust
 - 📝 Markdown
 
-
 <p align="center">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-  <img style="margin: auto;" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Lycoiref&layout=compact&langs_count=8" />
-  </a>
+  
 </p>
 
 <!-- #### 维护的项目
