@@ -4,6 +4,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: ['./src/styles'],
   },
+  env: {
+    WEATHER_API_KEY: process.env.WEATHER_API_KEY,
+  },
 }
 
 export default nextConfig
