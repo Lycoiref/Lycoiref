@@ -30,7 +30,7 @@ export default function Weather() {
 
   return (
     <>
-      <div className="weather">
+      <div className="weather shadow-xl border-sky-200 flex-grow">
         <div className="city">{weather.city}</div>
         <div className="info">
           <div className="temperature">{weather.temperature}℃</div>

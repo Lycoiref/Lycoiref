@@ -4,7 +4,8 @@ export default function Home() {
   return (
     <main className="w-screen flex justify-center">
       <div className="content w-full xl:w-3/5">
-        <div className="content w-full xl:w-3/5">
+        <div className="content w-full flex">
+          <Weather />
           <Weather />
         </div>
         Lycoiref的Blog，还在施工中......
