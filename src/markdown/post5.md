@@ -60,7 +60,7 @@ JavaScript作为一门高级语言，其内部的内存管理统一由引擎管�
 
 > 为了不让程序员费心分配内存，JavaScript 在定义变量时就完成了内存分配。
 
-```javascript
+```js
 let n = 123 // 给数值变量分配内存
 let s = 'azerty' // 给字符串分配内存
 
