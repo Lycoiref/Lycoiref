@@ -1,3 +1,10 @@
+---
+title: Platform 设计文档
+description: Platform主要用于各种需要管理的小型平台（如社团管理、团队管理甚至是家庭管理）
+date: 2024-10-14
+author: Lycoiref
+---
+
 # Platform 设计文档
 
 Platform主要用于各种需要管理的小型平台（如社团管理、团队管理甚至是家庭管理）
