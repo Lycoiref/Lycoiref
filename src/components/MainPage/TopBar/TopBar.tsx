@@ -65,11 +65,9 @@ export default function TopBar() {
             <div className="text">图库</div>
           </div>
           <div className="hidden xl:block">
-            <div className="item">
+            <div className="item" onClick={() => goPage('music')}>
               <i className="bi bi-music-note-list"></i>
-              <div className="text" onClick={() => goPage('music')}>
-                OST
-              </div>
+              <div className="text">OST</div>
             </div>
           </div>
           {/* <div className="item">
