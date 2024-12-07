@@ -7,6 +7,7 @@ const nextConfig = {
   env: {
     WEATHER_API_KEY: process.env.WEATHER_API_KEY,
   },
+  images: { unoptimized: true },
 }
 
 export default nextConfig

@@ -1,4 +1,5 @@
-import Weather from '../components/Home/Weather/Weather'
+import Profile from '@/components/Home/Profile'
+import Weather from '@/components/Home/Weather/Weather'
 
 export default function Home() {
   return (
@@ -8,7 +9,9 @@ export default function Home() {
           最近文章、置顶文章、推荐文章、一些好康的
         </div>
         <div className="w-[350px] flex flex-col gap-4">
-          <div className="w-full bg-white rounded-md h-[400px]">个人信息</div>
+          <div className="w-full bg-white rounded-md">
+            <Profile />
+          </div>
           <div className="w-full bg-white flex-grow rounded-md">
             文章信息、站点信息、Tags、友链、留言板、日历、天气、音乐
             <Weather />
