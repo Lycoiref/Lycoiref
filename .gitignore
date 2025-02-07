@@ -35,6 +35,9 @@ dist-ssr
 /.next/
 /out/
 
+# obsidian
+**/.obsidian/
+
 # production
 /build
 
