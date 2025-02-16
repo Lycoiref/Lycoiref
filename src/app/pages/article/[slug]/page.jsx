@@ -15,7 +15,7 @@ export async function generateStaticParams() {
   MDs = MDs.filter((slug) => slug.endsWith('.md'))
   MDs.map((md) => {
     slugs.push({
-      slug: md.replace(/\.md$/, ''),
+      slug: encodeURIComponent(md.replace(/\.md$/, '')),
     })
   })
   return slugs

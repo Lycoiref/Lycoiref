@@ -11,8 +11,10 @@ export async function getMarkdownFiles() {
 
 export async function getMarkdownFileBySlug(slug) {
   // use client-side fetch to get markdown file
+  const filename = decodeURIComponent(slug)
+
   let markdownFile = fs.readFileSync(
-    path.join(markdownDirectory, `${slug}.md`),
+    path.join(markdownDirectory, `${filename}.md`),
     'utf8'
   )
   let { data, content } = matter(markdownFile)
