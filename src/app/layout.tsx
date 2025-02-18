@@ -4,11 +4,8 @@ import './globals.scss'
 import 'bootstrap/dist/css/bootstrap.css'
 // add bs-icons
 import 'bootstrap-icons/font/bootstrap-icons.css'
-// import { Inter } from 'next/font/google'
 import { Fireworks } from '@/components/Fireworks'
 import TopBar from '@/components/MainPage/TopBar/TopBar'
-
-// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: "Lycoiref's Blog",

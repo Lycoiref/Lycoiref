@@ -2,8 +2,38 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@font-face {
+  font-family: 'FiraCode';
+  src: url('../assets/FiraCode/FiraCode-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'FiraCode';
+  src: url('../assets/FiraCode/FiraCode-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FiraCode';
+  src: url('../assets/FiraCode/FiraCode-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FiraCode';
+  src: url('../assets/FiraCode/FiraCode-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   transition: all 0.2s ease-in-out;
+  font-family: 'FiraCode';
 
   [data-theme='dark'] {
     /* 使用bs的颜暗黑配色 */
@@ -17,6 +47,7 @@ html {
 body {
   width: 100vw;
   overflow-x: hidden;
+  font-family: 'FiraCode';
 }
 
 .fireworks {

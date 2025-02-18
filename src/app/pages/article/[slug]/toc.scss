@@ -1,214 +1,313 @@
-#article-page {
-  // 风格变量
-  $ruler: 16px;
-  $color-red: #ae1100;
-  $color-bg: #ebecf0;
-  $color-shadow: #babecc;
-  $color-white: #fff;
+@import '~highlight.js/styles/github.css'; // 亮色主题
 
-  $dark-color-bg: #212529;
-  $dark-color-white: #fff;
+$max-width: 800px;
+$padding: 2rem;
+$color-primary: #333;
+$color-link: #3b82f6;
+$color-link-hover: #2563eb;
+$color-blockquote-border: #e5e7eb;
+$color-blockquote-text: #6b7280;
+$color-inline-code-bg: #f3f4f6;
+$color-inline-code-text: #ef4444;
+$color-table-border: #e5e7eb;
+$color-table-header-bg: #f9fafb;
+$color-custom-block-bg: #f8fafc;
+$color-custom-block-border: #e2e8f0;
+$color-info: #3b82f6;
+$color-warning: #f59e0b;
+$color-tip: #10b981;
 
-  width: 100%;
-  padding-bottom: 100px;
-  background: $color-bg;
-  transition: background-color 0.2s ease-in-out;
+$dark-color-text: #e5e7eb;
+$dark-color-heading: #f3f4f6;
+$dark-color-inline-code-bg: #1f2937;
+$dark-color-inline-code-text: #f87171;
+$dark-color-blockquote-border: #4b5563;
+$dark-color-blockquote-text: #9ca3af;
+$dark-color-table-border: #374151;
+$dark-color-table-header-bg: #1f2937;
+$dark-color-custom-block-bg: #1f2937;
+$dark-color-custom-block-border: #374151;
+$dark-color-header-bg: #212529;
+$dark-color-header-text: #e5e7eb;
 
-  &[data-theme='dark'] {
-    background: $dark-color-bg;
-    color: $dark-color-white;
-    transition: background-color 0.2s ease-in-out;
+* {
+  font-family: 'FiraCode';
+}
 
-    pre {
-      background: #1d1c1c;
-      color: $dark-color-white;
-      transition: background-color 0.2s ease-in-out;
+.markdown-header {
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  .header-content {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .article-title {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.3;
+  }
+
+  .article-description {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: #666;
+  }
+
+  .article-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tag {
+    padding: 0.25rem 0.75rem;
+    background-color: #f3f4f6;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    color: #4b5563;
+    transition: background-color 0.2s ease;
+  }
+
+  .tag:hover {
+    background-color: #e5e7eb;
+  }
+
+  [data-theme='dark'] & {
+    .article-title,
+    .article-description,
+    .article-meta {
+      color: $dark-color-header-text;
     }
   }
+}
 
-  pre {
-    background: #f6f8fa;
-    color: #333;
-    transition: background-color 0.2s ease-in-out;
+.markdown-content {
+  padding: 2rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+.markdown-body {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $padding;
+  color: $color-primary;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.7;
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 2.5rem 0 1.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #111;
   }
 
-  .markdown-body {
-    width: 100%;
-    margin: 0 auto;
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
 
-    border: 0;
-    outline: 0;
-    font-size: $ruler;
-    border-radius: 40px;
-    padding: $ruler;
-    background-color: $color-bg;
-    text-shadow: 1px 1px 0 $color-white;
+  /* Paragraphs and Lists */
+  p,
+  ul,
+  ol {
+    margin: 1.25rem 0;
+    font-size: 1rem;
+  }
 
-    color: #61677c;
-    font-weight: bold;
-    box-shadow: -5px -5px 20px $color-white, 5px 5px 20px $color-shadow;
-    transition: background-color 0.2s ease-in-out;
-    font-weight: 600;
+  ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+  }
+
+  ol {
+    padding-left: 1.5rem;
+    list-style-type: decimal;
+  }
+
+  /* Links */
+  a {
+    color: $color-link;
+    text-decoration: none;
+    transition: color 0.2s ease;
 
     &:hover {
-      box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
-    }
-
-    &[data-theme='dark'] {
-      background-color: $dark-color-bg;
-      color: $dark-color-white;
-      font-weight: normal;
-      text-shadow: none;
-      transition: background-color 0.2s ease-in-out;
+      color: $color-link-hover;
     }
   }
 
-  @media (min-width: 768px) {
-    .markdown-body {
-      width: calc(40% + 100px);
-      margin: 0 auto;
-      margin-bottom: 100px;
-      padding: 60px;
-    }
-  }
-
-  /* TOC样式 */
-  .toc {
-    display: none;
-    position: fixed;
-    top: 100px;
-    right: 0;
-    width: 250px;
-    margin-top: 1.5em;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    font-size: 14px;
-    line-height: 1.5;
-
-    /* TOC链接样式 */
-    a {
-      display: block;
-      margin-bottom: 0.5em;
-      padding: 5px;
-      text-decoration: none;
-      color: #333;
-      transition: color 0.3s ease-in-out;
-    }
-
-    a:hover {
-      color: #0070f3;
-    }
-
-    /* 列表样式 */
-    ol {
-      list-style: none;
-      padding-left: 15px;
-      margin: 0;
-    }
-
-    /* 列表项样式 */
-    li {
-      display: block;
-      counter-increment: list-item;
-    }
-  }
-
+  /* Blockquotes */
   blockquote {
-    p {
-      font-weight: lighter;
-      font-style: italic;
+    margin: 1.5rem 0;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    border-left: 3px solid $color-blockquote-border;
+    color: $color-blockquote-text;
+    font-style: italic;
+  }
+
+  /* Code blocks */
+  .code-block {
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .inline-code {
+    padding: 0.2rem 0.4rem;
+    background-color: $color-inline-code-bg;
+    border-radius: 4px;
+    font-size: 0.875em;
+    color: $color-inline-code-text;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 0.75rem;
+      border: 1px solid $color-table-border;
+      text-align: left;
+    }
+
+    th {
+      background-color: $color-table-header-bg;
+      font-weight: 600;
     }
   }
 
-  // 代码块文件名样式
-  .named-fence-block {
-    position: relative;
-
-    .named-fence-filename {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      padding: 0.5em 1em;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      font-size: 0.8em;
-      font-weight: bold;
-      color: #bdbdbd;
-    }
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1.5rem 0;
   }
 
-  // 自定义块样式
-  .tip {
-    background-color: #dff0d8;
-    padding: 15px;
-    margin: 10px 0;
-    font-size: 14px;
-    border-radius: 15px;
-    color: #3c763d;
-
-    p {
-      margin-top: 10px;
-    }
-
-    &::before {
-      content: 'Tips:';
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-  }
-
-  .warning {
-    background-color: #fdf6cd;
-    padding: 15px;
-    margin: 10px 0;
-    font-size: 14px;
-    border-radius: 15px;
-    color: #8a6d3b;
-
-    p {
-      margin-top: 10px;
-    }
-
-    &::before {
-      content: 'Warning:';
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-  }
-
-  .danger {
-    background-color: #f2dede;
-    padding: 15px;
-    margin: 10px 0;
-    font-size: 14px;
-    border-radius: 15px;
-    color: #a94442;
-
-    p {
-      margin-top: 10px;
-    }
-
-    &::before {
-      content: 'Danger:';
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-  }
-
-  // 卡片样式
-  .card {
+  /* Horizontal Rule */
+  hr {
+    margin: 2rem 0;
     border: 0;
-    outline: 0;
-    font-size: $ruler;
-    border-radius: $ruler * 20;
-    padding: $ruler;
-    background-color: $color-bg;
-    text-shadow: 1px 1px 0 $color-white;
+    border-top: 1px solid $color-table-border;
+  }
+
+  /* Custom Blocks */
+  .info,
+  .warning,
+  .tip {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: $color-custom-block-bg;
+    border: 1px solid $color-custom-block-border;
+
+    &::before {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+  }
+
+  .info::before {
+    content: 'Info';
+    color: $color-info;
+  }
+  .warning::before {
+    content: 'Warning';
+    color: $color-warning;
+  }
+  .tip::before {
+    content: 'Tip';
+    color: $color-tip;
+  }
+
+  /* Dark mode support */
+  [data-theme='dark'] & {
+    color: $dark-color-text;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $dark-color-heading;
+    }
+
+    .inline-code {
+      background-color: $dark-color-inline-code-bg;
+      color: $dark-color-inline-code-text;
+    }
+
+    blockquote {
+      border-left-color: $dark-color-blockquote-border;
+      color: $dark-color-blockquote-text;
+    }
+
+    th,
+    td {
+      border-color: $dark-color-table-border;
+    }
+
+    th {
+      background-color: $dark-color-table-header-bg;
+    }
+
+    hr {
+      border-color: $dark-color-table-border;
+    }
+
+    .info,
+    .warning,
+    .tip {
+      background-color: $dark-color-custom-block-bg;
+      border-color: $dark-color-custom-block-border;
+    }
+
+    code,
+    pre {
+      background-color: #333; /* 代码块背景 */
+      color: #f5f5f5; /* 代码文字颜色 */
+    }
+
+    .hljs-string {
+      color: #a6e22e; /* 字符串颜色 */
+    }
+
+    .hljs-number {
+      color: #ae81ff; /* 数字颜色 */
+    }
   }
 }
