@@ -19,10 +19,10 @@ export default function ArticleCard({ article }: { article: Article }) {
     <Link
       href={`/pages/article/${slug}`}
       prefetch={false}
-      className="text-black no-underline block"
+      className="block no-underline text-slate-800"
     >
-      <div className="article-card flex h-24 bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg">
-        <div className="img w-40 h-24 relative">
+      <div className="article-card group flex h-24 overflow-hidden rounded-md border border-slate-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
+        <div className="img relative h-24 w-36 shrink-0">
           <Image
             src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&q=50&fm=webp&crop=entropy&cs=srgb&width=400&fmt=webp"
             alt=""
@@ -30,10 +30,12 @@ export default function ArticleCard({ article }: { article: Article }) {
             objectFit="cover"
           />
         </div>
-        <div className="content w-full h-full flex flex-col justify-between p-4">
+        <div className="content flex h-full w-full flex-col justify-between p-4">
           <div className="header">
-            <div className="title text-xl font-bold line-clamp-1">{title}</div>
-            <div className="date text-gray-400 text-sm">
+            <div className="title line-clamp-1 text-lg font-semibold text-slate-900">
+              {title}
+            </div>
+            <div className="date text-sm text-slate-500">
               {date.toLocaleDateString('zh-CN', {
                 year: 'numeric',
                 month: 'long',
@@ -41,14 +43,14 @@ export default function ArticleCard({ article }: { article: Article }) {
               })}
             </div>
           </div>
-          <div className="tags">
+          <div className="tags text-sm text-slate-500">
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="tag mr-2 font-light relative group inline-block"
+                className="tag group relative mr-3 inline-flex items-center font-light transition-colors duration-200 hover:text-slate-700"
               >
                 #{tag}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-slate-400 transition-transform duration-300 group-hover:scale-x-100"></span>
               </span>
             ))}
           </div>

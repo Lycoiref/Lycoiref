@@ -37,49 +37,56 @@ export default function ArchivePage() {
   }, [])
 
   return (
-    <main className="space-y-8">
-      <div className="space-y-4">
-        <h1 className="text-3xl font-bold tracking-tight">文章归档</h1>
-        <p className="text-muted-foreground">
-          共计{' '}
-          {
-            Object.values(archiveData).flatMap((months) =>
-              Object.values(months).flat()
-            ).length
-          }{' '}
-          篇文章， 涵盖 {allTags.length} 个主题
-        </p>
-      </div>
+    <main className="w-screen flex justify-center py-10">
+      <div className="w-full max-w-5xl space-y-8 px-6">
+        <div className="space-y-3 rounded-md bg-white p-6 shadow-sm">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+            文章归档
+          </h1>
+          <p className="text-sm text-slate-600">
+            共计{' '}
+            {
+              Object.values(archiveData).flatMap((months) =>
+                Object.values(months).flat()
+              ).length
+            }{' '}
+            篇文章，涵盖 {allTags.length} 个主题
+          </p>
+        </div>
 
-      {Object.entries(archiveData)
-        .reverse()
-        .map(([year, months]) => (
-          <div key={year} className="space-y-6">
-            <h2 className="text-2xl font-semibold flex items-center">
-              <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center mr-2">
-                {year.slice(-2)}
-              </span>
-              {year}年
-            </h2>
-            {Object.entries(months)
-              .reverse()
-              .map(([month, posts]) => (
-                <div key={`${year}-${month}`} className="space-y-4 ml-10">
-                  <h3 className="text-xl font-medium flex items-center">
-                    <span className="text-primary mr-2">{month}月</span>
-                    <span className="text-sm text-muted-foreground">
-                      ({posts.length}篇)
-                    </span>
-                  </h3>
-                  <div className="space-y-6">
-                    {posts.map((post) => (
-                      <ArticleCard key={post.slug} article={post} />
-                    ))}
+        {Object.entries(archiveData)
+          .reverse()
+          .map(([year, months]) => (
+            <section key={year} className="space-y-6">
+              <h2 className="flex items-center gap-3 text-2xl font-semibold text-slate-900">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 text-sm font-semibold text-white">
+                  {year.slice(-2)}
+                </span>
+                {year}年
+              </h2>
+              {Object.entries(months)
+                .reverse()
+                .map(([month, posts]) => (
+                  <div
+                    key={`${year}-${month}`}
+                    className="space-y-4 border-l border-slate-200 pl-8"
+                  >
+                    <div className="flex items-baseline gap-2 text-slate-700">
+                      <h3 className="text-lg font-medium">{month}月</h3>
+                      <span className="text-sm text-slate-500">
+                        ({posts.length}篇)
+                      </span>
+                    </div>
+                    <div className="space-y-6">
+                      {posts.map((post) => (
+                        <ArticleCard key={post.slug} article={post} />
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
-          </div>
-        ))}
+                ))}
+            </section>
+          ))}
+      </div>
     </main>
   )
 }
